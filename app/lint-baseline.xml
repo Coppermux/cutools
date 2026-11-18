@@ -1,0 +1,2739 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.7.3" type="baseline" client="gradle" dependencies="false" name="AGP (8.7.3)" variant="all" version="8.7.3">
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        if (value % 1.0 == 0.0) value.toLong().toString() else String.format(&quot;%.1f&quot;, value)"
+        errorLine2="                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/core/network/ResourceTimingFormatter.kt"
+            line="27"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.core:core-ktx than 1.15.0 is available: 1.19.0"
+        errorLine1="    implementation &apos;androidx.core:core-ktx:1.15.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="97"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.appcompat:appcompat than 1.7.0 is available: 1.8.0"
+        errorLine1="    implementation &apos;androidx.appcompat:appcompat:1.7.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="98"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.material:material than 1.12.0 is available: 1.14.0"
+        errorLine1="    implementation &apos;com.google.android.material:material:1.12.0&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="99"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.2"
+        errorLine1="    implementation &apos;androidx.constraintlayout:constraintlayout:2.1.4&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="100"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.recyclerview:recyclerview than 1.3.2 is available: 1.4.0"
+        errorLine1="    implementation &apos;androidx.recyclerview:recyclerview:1.3.2&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="101"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.compose:compose-bom than 2024.09.03 is available: 2026.08.00"
+        errorLine1="    implementation(platform(&apos;androidx.compose:compose-bom:2024.09.03&apos;))"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="104"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity-compose than 1.9.2 is available: 1.13.0"
+        errorLine1="    implementation &apos;androidx.activity:activity-compose:1.9.2&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="109"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-compose than 2.8.7 is available: 2.11.0"
+        errorLine1="    implementation &apos;androidx.lifecycle:lifecycle-runtime-compose:2.8.7&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="110"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.8.7 is available: 2.11.0"
+        errorLine1="    implementation &apos;androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7&apos;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle"
+            line="111"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleEntryAdapter.kt"
+            line="37"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/CssStyleAdapter.kt"
+            line="39"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/DomAttributeAdapter.kt"
+            line="32"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/DomTreeAdapter.kt"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/NetworkRequestAdapter.kt"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/profiling/PerformanceRowAdapter.kt"
+            line="22"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageRowAdapter.kt"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <location
+            file="src/main/res/mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.md_theme_light_onPrimary` appears to be unused"
+        errorLine1="    &lt;color name=&quot;md_theme_light_onPrimary&quot;>#FFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.md_theme_light_onSecondary` appears to be unused"
+        errorLine1="    &lt;color name=&quot;md_theme_light_onSecondary&quot;>#FFFFFF&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.md_theme_light_background` appears to be unused"
+        errorLine1="    &lt;color name=&quot;md_theme_light_background&quot;>#FFF8F0&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.md_theme_light_onBackground` appears to be unused"
+        errorLine1="    &lt;color name=&quot;md_theme_light_onBackground&quot;>#1C1B1F&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="9"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.md_theme_light_error` appears to be unused"
+        errorLine1="    &lt;color name=&quot;md_theme_light_error&quot;>#B3261E&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive icon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ButtonOrder"
+        message="Cancel button should be on the left (was &quot;Save | Delete | Cancel&quot;, should be &quot;Cancel | Delete | Save&quot;)"
+        errorLine1="        &lt;Button"
+        errorLine2="         ~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="160"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="47"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="184"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="247"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="34"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="266"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="355"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="365"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="404"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="434"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="34"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="47"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="83"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="16"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="        &lt;EditText"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="40"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="51"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="83"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="92"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="    &lt;EditText"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="102"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.consoleInput.setText(&quot;$0&quot;)"
+        errorLine2="                                     ~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="132"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            binding.consoleStateText.text = &quot;Error: ${error.message}&quot;"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="149"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.consoleStateText.text = &quot;Error: ${error.message}&quot;"
+        errorLine2="                                             ~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="149"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.consoleStateText.text = binding.consoleStateText.text.toString() + cap"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="193"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            binding.consoleStateText.text = &quot;Querying… (${qs.activeHelper?.displayLabel ?: &quot;query&quot;})&quot;"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="222"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.consoleStateText.text = &quot;Querying… (${qs.activeHelper?.displayLabel ?: &quot;query&quot;})&quot;"
+        errorLine2="                                             ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="222"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            binding.consoleStateText.text = &quot;Evaluating… (${state.pendingEvaluations} pending)&quot;"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="258"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.consoleStateText.text = &quot;Evaluating… (${state.pendingEvaluations} pending)&quot;"
+        errorLine2="                                             ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="258"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.consoleStateText.text = &quot;Evaluating… (${state.pendingEvaluations} pending)&quot;"
+        errorLine2="                                                                                     ~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleActivity.kt"
+            line="258"
+            column="86"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                    kind.text = (entry.helperLabel ?: &quot;evaluation&quot;) + &quot; exception&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleEntryAdapter.kt"
+            line="112"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    kind.text = (entry.helperLabel ?: &quot;evaluation&quot;) + &quot; exception&quot;"
+        errorLine2="                                                                       ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleEntryAdapter.kt"
+            line="112"
+            column="72"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                    kind.text = (entry.helperLabel ?: &quot;evaluation&quot;) + &quot; error&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleEntryAdapter.kt"
+            line="124"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    kind.text = (entry.helperLabel ?: &quot;evaluation&quot;) + &quot; error&quot;"
+        errorLine2="                                                                       ~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ConsoleEntryAdapter.kt"
+            line="124"
+            column="72"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.elementsMutationStatus.text = &quot;Attribute name is required&quot;"
+        errorLine2="                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ElementsActivity.kt"
+            line="189"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            if (error != null) binding.elementsSearchStatus.text = &quot;Error: ${error.message}&quot;"
+        errorLine2="                                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ElementsActivity.kt"
+            line="299"
+            column="68"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            if (error != null) binding.elementsSearchStatus.text = &quot;Error: ${error.message}&quot;"
+        errorLine2="                                                                    ~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ElementsActivity.kt"
+            line="299"
+            column="69"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            binding.elementsSearchStatus.text = &quot;Error: ${error.message}&quot;"
+        errorLine2="                                                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ElementsActivity.kt"
+            line="306"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.elementsSearchStatus.text = &quot;Error: ${error.message}&quot;"
+        errorLine2="                                                 ~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ElementsActivity.kt"
+            line="306"
+            column="50"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.elementsStateText.text = &quot;State: ${inspector.state().name}&quot;"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ElementsActivity.kt"
+            line="325"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        binding.elementsStateText.text = &quot;State: ${inspector.state().name}&quot;"
+        errorLine2="                                          ~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ElementsActivity.kt"
+            line="325"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.elementsSelectedLabel.text = &quot;Nothing selected&quot;"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/ElementsActivity.kt"
+            line="352"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.selectedTargetText.text = &quot;${target.title ?: target.type} (${target.url ?: &quot;&quot;})&quot;"
+        errorLine2="                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/MainActivity.kt"
+            line="160"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead."
+        errorLine1="        priority.setText(draft.priority.toString())"
+        errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/MockRuleDialog.kt"
+            line="105"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead."
+        errorLine1="        statusCode.setText(draft.statusCode.toString())"
+        errorLine2="                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/MockRuleDialog.kt"
+            line="106"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        tv.text = &quot;No interception rules yet. Create one with the button above.&quot;"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/MockRulesDialog.kt"
+            line="64"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        meta.text = &quot;$method · $action · status ${rule.statusCode} · priority ${rule.priority}&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/MockRulesDialog.kt"
+            line="103"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        meta.text = &quot;$method · $action · status ${rule.statusCode} · priority ${rule.priority}&quot;"
+        errorLine2="                                      ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/MockRulesDialog.kt"
+            line="103"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        meta.text = &quot;$method · $action · status ${rule.statusCode} · priority ${rule.priority}&quot;"
+        errorLine2="                                                                  ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/MockRulesDialog.kt"
+            line="103"
+            column="67"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.networkStatusText.text = &quot;Error: ${error.message}&quot;"
+        errorLine2="                                         ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/NetworkActivity.kt"
+            line="80"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        binding.networkStatusText.text = &quot;Error: ${error.message}&quot;"
+        errorLine2="                                          ~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/NetworkActivity.kt"
+            line="80"
+            column="43"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.networkStatusText.text = &quot;Inspect: select a request first.&quot;"
+        errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/NetworkActivity.kt"
+            line="168"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        label.text = row.label + &quot;: &quot;"
+        errorLine2="                     ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/network/NetworkDetailDialog.kt"
+            line="129"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.performanceStatusText.text = &quot;Attach a target before recording.&quot;"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/profiling/PerformanceToolScreen.kt"
+            line="82"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.performanceSummaryText.text = &quot;${rows.size} entries&quot;"
+        errorLine2="                                              ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/profiling/PerformanceToolScreen.kt"
+            line="124"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        binding.performanceSummaryText.text = &quot;${rows.size} entries&quot;"
+        errorLine2="                                                           ~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/profiling/PerformanceToolScreen.kt"
+            line="124"
+            column="60"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.performanceSecondaryButton.text = &quot;Stop&quot;"
+        errorLine2="                                                           ~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/profiling/PerformanceToolScreen.kt"
+            line="135"
+            column="60"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.performanceSecondaryButton.text = &quot;Stop&quot;"
+        errorLine2="                                                           ~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/profiling/PerformanceToolScreen.kt"
+            line="143"
+            column="60"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.performancePrimaryButton.text = &quot;Snapshot&quot;"
+        errorLine2="                                                         ~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/profiling/PerformanceToolScreen.kt"
+            line="148"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.performanceSecondaryButton.text = &quot;Sample&quot;"
+        errorLine2="                                                           ~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/profiling/PerformanceToolScreen.kt"
+            line="149"
+            column="60"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            binding.securityStorageStatusText.text = &quot;Attach a target before running actions.&quot;"
+        errorLine2="                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageToolScreen.kt"
+            line="86"
+            column="55"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.securityStorageSummaryText.text = &quot;${rows.size} entries&quot;"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageToolScreen.kt"
+            line="132"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        binding.securityStorageSummaryText.text = &quot;${rows.size} entries&quot;"
+        errorLine2="                                                               ~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageToolScreen.kt"
+            line="132"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.securityStorageSecondaryButton.text = &quot;Disable&quot;"
+        errorLine2="                                                               ~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageToolScreen.kt"
+            line="141"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.securityStoragePrimaryButton.text = &quot;Refresh Quota&quot;"
+        errorLine2="                                                             ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageToolScreen.kt"
+            line="144"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.securityStorageSecondaryButton.text = &quot;Clear All Data&quot;"
+        errorLine2="                                                               ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageToolScreen.kt"
+            line="145"
+            column="64"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.securityStoragePrimaryButton.text = &quot;Refresh Databases&quot;"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageToolScreen.kt"
+            line="148"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                binding.securityStoragePrimaryButton.text = &quot;Refresh Buckets&quot;"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/coppermux/cutools/ui/securitystorage/SecurityStorageToolScreen.kt"
+            line="153"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Console&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Console&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;State: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;State: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Target: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Target: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Search console…&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Search console…&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;✕&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;✕&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Filter:&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Filter:&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;log&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;log&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="89"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;info&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;info&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;debug&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;debug&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="103"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;warn&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;warn&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="110"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;error&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;error&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="117"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;exc&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;exc&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="124"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;No console messages yet.&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;No console messages yet.&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="132"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;▲&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;▲&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="164"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;▼&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;▼&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="176"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter JavaScript… ($0, $(), $$())&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter JavaScript… ($0, $(), $$())&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="189"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Run&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Run&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="199"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Selected element: —&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Selected element: —&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="220"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Use $0&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Use $0&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="227"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;querySelector (#id, .class, …)&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;querySelector (#id, .class, …)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="252"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;querySelector&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;querySelector&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="261"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;All&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;All&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_console.xml"
+            line="273"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;State: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;State: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Target: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Target: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="22"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Search (tag, #id, .class, attr=value)&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Search (tag, #id, .class, attr=value)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="39"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Search&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Search&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="48"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;◀ Prev&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;◀ Prev&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="71"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Next ▶&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Next ▶&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="84"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;DOM TREE&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;DOM TREE&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="98"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CSS STYLES&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;CSS STYLES&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="116"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;PSEUDO:&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;PSEUDO:&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="134"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;:hover&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;:hover&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="147"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;:hover&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;:hover&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="148"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;:active&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;:active&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="160"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;:active&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;:active&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="161"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;:focus&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;:focus&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="173"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;:focus&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;:focus&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="174"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;OVERLAY:&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;OVERLAY:&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="199"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Grid&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;Grid&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="212"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Grid&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;Grid&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="213"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Flex&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;Flex&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="225"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Flex&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;Flex&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="226"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CQ&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;CQ&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="238"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CQ&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;CQ&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="239"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;filter computed styles&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;filter computed styles&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="271"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;✕&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;✕&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="280"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;SELECTED NODE&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;SELECTED NODE&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="301"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Nothing selected&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Nothing selected&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="319"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;ATTRIBUTES&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;ATTRIBUTES&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="338"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;name&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;name&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="360"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;value&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;value&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="370"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Add&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Add&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="379"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TEXT&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;TEXT&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="392"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;text value&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;text value&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="409"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Apply&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Apply&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="417"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;OUTER HTML&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;OUTER HTML&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="430"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter replacement HTML&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Enter replacement HTML&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="443"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cancel&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Cancel&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="470"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Edit HTML&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Edit HTML&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="479"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Apply&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Apply&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="487"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Delete&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Delete&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="496"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Refresh&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Refresh&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_elements.xml"
+            line="511"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;State&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;State&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;DISCONNECTED&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;DISCONNECTED&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="27"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;ws://localhost:9222/devtools/browser&quot;, should use `@string` resource"
+        errorLine1="        android:hint=&quot;ws://localhost:9222/devtools/browser&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="38"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Connect&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Connect&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Disconnect&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Disconnect&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="71"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Attach&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Attach&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="79"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Detach&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Detach&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="87"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Elements&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Elements&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="95"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Console&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Console&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="103"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Network&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Network&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="111"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Performance&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Performance&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="119"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Security&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Security&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="127"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Audits&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Audits&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="146"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Perf Metrics&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Perf Metrics&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="154"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Memory&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Memory&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="162"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Targets&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Targets&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="170"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Security Inspect&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Security Inspect&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="178"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Browser Info&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Browser Info&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="185"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Not connected&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Not connected&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="197"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Session: -&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Session: -&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="210"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;No target selected&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;No target selected&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="222"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Targets&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Targets&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="235"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Network Monitor&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Network Monitor&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;State: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;State: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Target: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Target: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Search requests…&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Search requests…&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="52"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;✕&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;✕&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;All&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;All&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="88"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Fetch/XHR&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Fetch/XHR&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="96"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;JS&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;JS&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="104"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CSS&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;CSS&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="112"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Img&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Img&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="120"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Media&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Media&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="128"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Doc&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Doc&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="136"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Other&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Other&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="144"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;No requests yet.&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;No requests yet.&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="161"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Rules&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Rules&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="197"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Inspect&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Inspect&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_network.xml"
+            line="206"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Performance&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Performance&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_performance.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;State: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;State: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_performance.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Target: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Target: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_performance.xml"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Timeline&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Timeline&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_performance.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CPU Profile&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;CPU Profile&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_performance.xml"
+            line="64"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Heap Snapshot&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Heap Snapshot&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_performance.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Record&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Record&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_performance.xml"
+            line="127"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Stop&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Stop&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_performance.xml"
+            line="136"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Security &amp; Storage&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Security &amp;amp; Storage&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;State: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;State: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Target: —&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Target: —&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Security&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Security&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Storage Quota&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Storage Quota&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="64"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;IndexedDB&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;IndexedDB&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cache Storage&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Cache Storage&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Origin (e.g. https://example.com/)&quot;, should use `@string` resource"
+        errorLine1="        android:hint=&quot;Origin (e.g. https://example.com/)&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="87"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enable&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Enable&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="146"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Disable&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Disable&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_securitystorage.xml"
+            line="155"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Interception Rule&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Interception Rule&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;URL pattern (e.g. https://api.example.com/*)&quot;, should use `@string` resource"
+        errorLine1="        android:hint=&quot;URL pattern (e.g. https://api.example.com/*)&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="21"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Method (GET)&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Method (GET)&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="36"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Priority&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Priority&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="46"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;HTTP status (e.g. 200)&quot;, should use `@string` resource"
+        errorLine1="        android:hint=&quot;HTTP status (e.g. 200)&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="56"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Mock response&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Mock response&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="70"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Fail request&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Fail request&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="79"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Failure reason (Failed/Aborted/TimedOut/AccessDenied/ConnectionRefused)&quot;, should use `@string` resource"
+        errorLine1="        android:hint=&quot;Failure reason (Failed/Aborted/TimedOut/AccessDenied/ConnectionRefused)&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="88"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Response headers (Name: value, one per line)&quot;, should use `@string` resource"
+        errorLine1="        android:hint=&quot;Response headers (Name: value, one per line)&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="97"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Mock response body&quot;, should use `@string` resource"
+        errorLine1="        android:hint=&quot;Mock response body&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="107"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Body is base64-encoded&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Body is base64-encoded&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="117"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Rule enabled&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Rule enabled&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="124"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Save&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Save&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="149"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Delete&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Delete&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="158"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cancel&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Cancel&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rule.xml"
+            line="167"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Interception Rules&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Interception Rules&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rules.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;+ New Rule&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;+ New Rule&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_mock_rules.xml"
+            line="22"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Request Detail&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Request Detail&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_network_detail.xml"
+            line="12"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Headers&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;Headers&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_network_detail.xml"
+            line="28"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Headers&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;Headers&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_network_detail.xml"
+            line="29"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Body&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;Body&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_network_detail.xml"
+            line="37"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Body&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;Body&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_network_detail.xml"
+            line="38"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Timing&quot;, should use `@string` resource"
+        errorLine1="            android:textOff=&quot;Timing&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_network_detail.xml"
+            line="46"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Timing&quot;, should use `@string` resource"
+        errorLine1="            android:textOn=&quot;Timing&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/dialog_network_detail.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;log&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;log&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_console_entry.xml"
+            line="25"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;--:--:--&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;--:--:--&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_console_entry.xml"
+            line="33"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Edit&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Edit&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_dom_attribute.xml"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Remove&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Remove&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_dom_attribute.xml"
+            line="42"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;pending&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;pending&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_network_request.xml"
+            line="24"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;GET&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;GET&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_network_request.xml"
+            line="34"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry"
+        errorLine1="        android:paddingRight=&quot;8dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_computed.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry"
+        errorLine1="        android:paddingRight=&quot;4dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_declaration.xml"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlSymmetry"
+        message="When you define `paddingRight` you should probably also define `paddingLeft` for right-to-left symmetry"
+        errorLine1="        android:paddingRight=&quot;8dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_declaration.xml"
+            line="31"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;12dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:paddingLeft=&quot;12dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_computed.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;6dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:paddingRight=&quot;6dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_computed.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;8dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:paddingRight=&quot;8dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_computed.xml"
+            line="24"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingLeft` with `android:paddingStart=&quot;12dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:paddingLeft=&quot;12dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_declaration.xml"
+            line="13"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;6dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:paddingRight=&quot;6dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_declaration.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;4dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:paddingRight=&quot;4dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_declaration.xml"
+            line="23"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        message="Consider replacing `android:paddingRight` with `android:paddingEnd=&quot;8dp&quot;` to better support right-to-left layouts"
+        errorLine1="        android:paddingRight=&quot;8dp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_css_declaration.xml"
+            line="31"
+            column="9"/>
+    </issue>
+
+</issues>

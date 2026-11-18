@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.ConsoleActivity">
+
+    <TextView
+        android:id="@+id/consoleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Console"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/consoleStateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="State: —"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/consoleTitle" />
+
+    <TextView
+        android:id="@+id/consoleTargetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Target: —"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/consoleStateText" />
+
+    <!-- Console search (CuTools presentation convenience) -->
+    <LinearLayout
+        android:id="@+id/consoleSearchRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/consoleTargetText">
+
+        <EditText
+            android:id="@+id/consoleSearchInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search console…"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/consoleSearchClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✕"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="12sp"
+            style="?attr/materialButtonOutlinedStyle" />
+    </LinearLayout>
+
+    <!-- Severity filtering (CuTools presentation convenience) -->
+    <LinearLayout
+        android:id="@+id/consoleFilterRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/consoleSearchRow">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter:"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/consoleFilterLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="log"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/consoleFilterInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="info"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/consoleFilterDebug"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="debug"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/consoleFilterWarn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="warn"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/consoleFilterError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="error"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/consoleFilterRuntime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="exc"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/consoleEmptyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No console messages yet."
+        android:textSize="13sp"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/consoleFilterRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/consoleRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/consoleEmptyText"
+        app:layout_constraintBottom_toTopOf="@id/consoleInputRow" />
+
+    <!-- JavaScript input + command-history navigation (history is CuTools-only) -->
+    <LinearLayout
+        android:id="@+id/consoleInputRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        app:layout_constraintBottom_toTopOf="@id/consoleSelectionRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/consoleHistoryBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▲"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="14sp"
+            style="?attr/materialButtonOutlinedStyle" />
+
+        <Button
+            android:id="@+id/consoleHistoryForward"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▼"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="14sp"
+            style="?attr/materialButtonOutlinedStyle" />
+
+        <EditText
+            android:id="@+id/consoleInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter JavaScript… ($0, $(), $$())"
+            android:inputType="textMultiLine"
+            android:imeOptions="actionGo"
+            android:maxLines="3"
+            android:minLines="1" />
+
+        <Button
+            android:id="@+id/consoleRunButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Run"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- $0 selected-element reference (CDP-backed CuTools convenience) -->
+    <LinearLayout
+        android:id="@+id/consoleSelectionRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        app:layout_constraintBottom_toTopOf="@id/consoleQueryRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/consoleSelectionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Selected element: —"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/consoleUseDollarButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use $0"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="12sp"
+            style="?attr/materialButtonOutlinedStyle" />
+    </LinearLayout>
+
+    <!-- querySelector helpers (CDP-backed page-context queries) -->
+    <LinearLayout
+        android:id="@+id/consoleQueryRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/consoleQueryInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="querySelector (#id, .class, …)"
+            android:inputType="text"
+            android:imeOptions="actionGo"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/consoleQuerySelectorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="querySelector"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="11sp"
+            style="?attr/materialButtonOutlinedStyle" />
+
+        <Button
+            android:id="@+id/consoleQuerySelectorAllButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="11sp"
+            style="?attr/materialButtonOutlinedStyle" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

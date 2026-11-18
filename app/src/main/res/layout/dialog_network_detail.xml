@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/detailTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request Detail"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/detailTabRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <ToggleButton
+            android:id="@+id/detailTabHeaders"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="Headers"
+            android:textOn="Headers"
+            android:textSize="12sp" />
+
+        <ToggleButton
+            android:id="@+id/detailTabBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="Body"
+            android:textOn="Body"
+            android:textSize="12sp" />
+
+        <ToggleButton
+            android:id="@+id/detailTabTiming"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="Timing"
+            android:textOn="Timing"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/detailContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>

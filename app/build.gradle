@@ -1,0 +1,192 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.compose'
+    id 'com.google.dagger.hilt.android' version '2.51.1'
+    id 'org.jetbrains.kotlin.kapt'
+}
+
+hilt {
+    enableAggregatingTask = false
+}
+
+android {
+    namespace 'com.coppermux.cutools'
+    compileSdk 35
+
+    sourceSets {
+        test {
+            java.srcDirs += 'src/integrationTest/java'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.coppermux.cutools"
+        minSdk 26
+        targetSdk 35
+        versionCode 10000
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Release signing: a release keystore is applied from `keystore.properties`
+    // at the repo root when present (see docs/README for the GA signing guide).
+    // When absent, `assembleRelease` produces an unsigned release artifact.
+    def keystorePropertiesFile = rootProject.file("keystore.properties")
+    def keystoreProperties = new Properties()
+    if (keystorePropertiesFile.exists()) {
+        keystorePropertiesFile.withInputStream { keystoreProperties.load(it) }
+    }
+
+    signingConfigs {
+        if (keystorePropertiesFile.exists()) {
+            release {
+                storeFile file(keystoreProperties["storeFile"])
+                storePassword keystoreProperties["storePassword"]
+                keyAlias keystoreProperties["keyAlias"]
+                keyPassword keystoreProperties["keyPassword"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (keystorePropertiesFile.exists()) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    buildFeatures {
+        viewBinding true
+        compose true
+        buildConfig true
+    }
+
+    packaging {
+        resources {
+            excludes += "META-INF/gradle/incremental.annotation.processors"
+        }
+    }
+
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
+
+    lint {
+        baseline = file('lint-baseline.xml')
+    }
+}
+
+sourceSets {
+    integrationTest {
+        java.srcDir 'src/integrationTest/java'
+        resources.srcDir 'src/integrationTest/resources'
+    }
+}
+
+configurations {
+    integrationTestImplementation.extendsFrom testImplementation
+    integrationTestRuntimeOnly.extendsFrom testRuntimeOnly
+}
+
+tasks.withType(org.gradle.api.tasks.testing.Test)
+    .matching { task -> task.name == 'test' || task.name == 'testDebugUnitTest' || task.name == 'testReleaseUnitTest' }
+    .configureEach { task ->
+        task.exclude 'com/coppermux/cutools/core/integration/**'
+    }
+
+// Runs integration tests against a live headless Chrome (127.0.0.1:9224).
+tasks.register('integrationTest', org.gradle.api.tasks.testing.Test) {
+    group = 'verification'
+    description = 'Runs integration tests against a live headless Chrome on 127.0.0.1:9224.'
+    include 'com/coppermux/cutools/core/integration/**'
+    dependsOn tasks.named('compileDebugUnitTestKotlin'), tasks.named('compileDebugUnitTestSources')
+    useJUnit()
+    testLogging {
+        events 'failed', 'skipped'
+        showStandardStreams = true
+    }
+}
+
+afterEvaluate {
+    def unitTest = tasks.named('testDebugUnitTest').get()
+    tasks.named('integrationTest').get().tap { t ->
+        t.setTestClassesDirs(unitTest.getTestClassesDirs())
+        t.setClasspath(unitTest.getClasspath())
+    }
+}
+
+dependencies {
+    // AndroidX
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.recyclerview:recyclerview:1.3.2'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
+    // Jetpack Compose (managed via the Compose BOM for a consistent version set)
+    implementation(platform('androidx.compose:compose-bom:2024.09.03'))
+    implementation 'androidx.compose.ui:ui'
+    implementation 'androidx.compose.foundation:foundation'
+    implementation 'androidx.compose.material3:material3'
+    implementation 'androidx.compose.ui:ui-tooling-preview'
+    implementation 'androidx.compose.material:material-icons-extended'
+    implementation 'androidx.activity:activity-compose:1.9.2'
+    implementation 'androidx.lifecycle:lifecycle-runtime-compose:2.8.7'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7'
+    implementation 'androidx.hilt:hilt-navigation-compose:1.1.0'
+    debugImplementation 'androidx.compose.ui:ui-tooling'
+    debugImplementation 'androidx.compose.ui:ui-test-manifest'
+
+    // Kotlin coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+
+    // Room persistence
+    implementation 'androidx.room:room-runtime:2.6.1'
+    implementation 'androidx.room:room-ktx:2.6.1'
+    kapt 'androidx.room:room-compiler:2.6.1'
+
+    // Hilt dependency injection
+    implementation 'com.google.dagger:hilt-android:2.51.1'
+    kapt 'com.google.dagger:hilt-compiler:2.51.1'
+    implementation 'javax.inject:javax.inject:1'
+
+    // OkHttp (WebSocket support)
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+
+    // Moshi (JSON with unknown field retention)
+    implementation 'com.squareup.moshi:moshi:1.15.2'
+    implementation 'com.squareup.moshi:moshi-kotlin:1.15.2'
+
+    // --- Test dependencies ---
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.8.1'
+    testImplementation 'org.mockito:mockito-core:5.14.0'
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:5.2.0'
+    testImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
+    testImplementation 'com.squareup.moshi:moshi-kotlin:1.15.2'
+    testImplementation 'androidx.test:core:1.6.1'
+    testImplementation 'androidx.test:runner:1.6.1'
+
+    androidTestImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test:core:1.6.1'
+    androidTestImplementation 'androidx.test:runner:1.6.1'
+    androidTestImplementation 'androidx.test:rules:1.6.1'
+    androidTestImplementation 'com.squareup.okhttp3:mockwebserver:4.12.0'
+}

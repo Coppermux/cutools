@@ -1,0 +1,51 @@
+# Gradle
+.gradle/
+.kotlin/
+build/
+app/build/
+
+# Android
+*.apk
+*.ap_
+*.aab
+*.apks
+*.keystore
+*.jks
+captures/
+.externalNativeBuild/
+.cxx/
+*.so
+*.class
+
+# Generated files
+**/build/
+**/gen/
+**/generated/
+**/*.iml
+**/*.iws
+**/*.ipr
+**/local.properties
+
+# Android Studio
+*.log
+*.tmp
+*.swp
+.DS_Store
+.vscode/
+.idea/
+navigation-report.json
+
+# Diagnostic traces
+*.perfetto-trace
+*.trace
+
+# Secrets
+*.gpg
+*.key
+*.pem
+keystore.properties
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini

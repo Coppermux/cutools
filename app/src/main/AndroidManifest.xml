@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.coppermux.cutools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application android:name=".CuToolsApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.CuTools"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".ui.shell.ShellActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.CuTools.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.ElementsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.ConsoleActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.network.NetworkActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.profiling.PerformanceToolScreen"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.securitystorage.SecurityStorageToolScreen"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.accessibility.AccessibilityActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.emulation.EmulationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.audits.AuditActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.performance.PerformanceActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.memory.MemoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.target.TargetActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <activity
+            android:name=".ui.security.SecurityActivity"
+            android:exported="false"
+            android:theme="@style/Theme.CuTools.NoActionBar" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.coppermux.cutools.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+</manifest>

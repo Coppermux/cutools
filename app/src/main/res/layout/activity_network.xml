@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".ui.network.NetworkActivity">
+
+    <TextView
+        android:id="@+id/networkTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Network Monitor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/networkStatusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="State: —"
+        android:textSize="12sp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/networkTitle" />
+
+    <TextView
+        android:id="@+id/networkTargetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Target: —"
+        android:textSize="12sp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/networkStatusText" />
+
+    <!-- Live search (CuTools presentation convenience) -->
+    <LinearLayout
+        android:id="@+id/networkSearchRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/networkTargetText">
+
+        <EditText
+            android:id="@+id/networkSearchInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search requests…"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/networkSearchClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✕"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="12sp"
+            style="?attr/materialButtonOutlinedStyle" />
+    </LinearLayout>
+
+    <!-- Resource-type filter chips (All, Fetch/XHR, JS, CSS, Img, Media, Doc, Other) -->
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/networkFilterGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        app:singleSelection="true"
+        app:selectionRequired="true"
+        app:layout_constraintTop_toBottomOf="@id/networkSearchRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/networkTypeAll"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="All" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/networkTypeFetchXhr"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Fetch/XHR" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/networkTypeJs"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="JS" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/networkTypeCss"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="CSS" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/networkTypeImg"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Img" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/networkTypeMedia"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Media" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/networkTypeDoc"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Doc" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/networkTypeOther"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkable="true"
+            android:text="Other" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/networkSummaryText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12sp"
+        android:textColor="#616161"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/networkFilterGroup" />
+
+    <TextView
+        android:id="@+id/networkEmptyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No requests yet."
+        android:textSize="13sp"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/networkSummaryText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/networkRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/networkEmptyText"
+        app:layout_constraintBottom_toTopOf="@id/networkActionRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/networkActionRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/networkAddRuleButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="4dp"
+            android:text="Rules" />
+
+        <Button
+            android:id="@+id/networkInspectButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:text="Inspect" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

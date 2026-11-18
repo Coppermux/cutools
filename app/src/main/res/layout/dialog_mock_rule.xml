@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/ruleTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interception Rule"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ruleUrlPattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="URL pattern (e.g. https://api.example.com/*)"
+        android:inputType="textUri"
+        android:maxLines="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <EditText
+            android:id="@+id/ruleMethod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Method (GET)"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <EditText
+            android:id="@+id/rulePriority"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:hint="Priority"
+            android:inputType="number"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ruleStatusCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="HTTP status (e.g. 200)"
+        android:inputType="number"
+        android:maxLines="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <RadioButton
+            android:id="@+id/ruleActionFulfill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mock response"
+            android:textSize="12sp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/ruleActionFail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Fail request"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ruleFailureReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="Failure reason (Failed/Aborted/TimedOut/AccessDenied/ConnectionRefused)"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/ruleHeaders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="Response headers (Name: value, one per line)"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:minLines="1" />
+
+    <EditText
+        android:id="@+id/ruleBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:hint="Mock response body"
+        android:inputType="textMultiLine"
+        android:maxLines="4"
+        android:minLines="1" />
+
+    <CheckBox
+        android:id="@+id/ruleBodyBase64"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Body is base64-encoded"
+        android:textSize="12sp" />
+
+    <CheckBox
+        android:id="@+id/ruleEnabled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rule enabled"
+        android:textSize="12sp"
+        android:checked="true" />
+
+    <TextView
+        android:id="@+id/ruleValidationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#B3261E"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/ruleSaveButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/ruleDeleteButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Delete" />
+
+        <Button
+            android:id="@+id/ruleCancelButton"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Cancel" />
+    </LinearLayout>
+
+</LinearLayout>

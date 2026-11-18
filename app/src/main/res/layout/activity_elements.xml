@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/elementsStateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="State: —"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/elementsTargetText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Target: —"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/elementsStateText" />
+
+    <LinearLayout
+        android:id="@+id/elementsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/elementsTargetText">
+
+        <EditText
+            android:id="@+id/elementsSearchInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search (tag, #id, .class, attr=value)"
+            android:inputType="text"
+            android:imeOptions="actionSearch"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/elementsSearchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            style="?attr/materialButtonOutlinedStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/elementsSearchNavRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/elementsToolbar">
+
+        <TextView
+            android:id="@+id/elementsSearchStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/elementsSearchPrevButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="◀ Prev"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="12sp"
+            android:visibility="gone"
+            style="?attr/materialButtonOutlinedStyle" />
+
+        <Button
+            android:id="@+id/elementsSearchNextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next ▶"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="12sp"
+            android:visibility="gone"
+            style="?attr/materialButtonOutlinedStyle" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/elementsTreeLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DOM TREE"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/elementsSearchNavRow" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/elementsTreeRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/elementsTreeLabel"
+        app:layout_constraintBottom_toTopOf="@id/elementsCssLabel" />
+
+    <TextView
+        android:id="@+id/elementsCssLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CSS STYLES"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/elementsTreeRecyclerView" />
+
+    <LinearLayout
+        android:id="@+id/elementsPseudoRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/elementsCssLabel">
+
+        <TextView
+            android:id="@+id/elementsPseudoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="PSEUDO:"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/elementsPseudoHover"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textOn=":hover"
+            android:textOff=":hover"
+            android:textSize="11sp" />
+
+        <ToggleButton
+            android:id="@+id/elementsPseudoActive"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textOn=":active"
+            android:textOff=":active"
+            android:textSize="11sp" />
+
+        <ToggleButton
+            android:id="@+id/elementsPseudoFocus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textOn=":focus"
+            android:textOff=":focus"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/elementsPseudoStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/elementsPseudoRow" />
+
+    <LinearLayout
+        android:id="@+id/elementsOverlayRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/elementsPseudoStatus">
+
+        <TextView
+            android:id="@+id/elementsOverlayLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="OVERLAY:"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:id="@+id/elementsOverlayGrid"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textOn="Grid"
+            android:textOff="Grid"
+            android:textSize="11sp" />
+
+        <ToggleButton
+            android:id="@+id/elementsOverlayFlex"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textOn="Flex"
+            android:textOff="Flex"
+            android:textSize="11sp" />
+
+        <ToggleButton
+            android:id="@+id/elementsOverlayContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:textOn="CQ"
+            android:textOff="CQ"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/elementsOverlayStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/elementsOverlayRow" />
+
+    <TextView
+        android:id="@+id/elementsCssStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="11sp"
+        app:layout_constraintTop_toBottomOf="@id/elementsOverlayStatus" />
+
+    <LinearLayout
+        android:id="@+id/elementsCssFilterRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/elementsCssStatus">
+
+        <EditText
+            android:id="@+id/elementsCssFilterInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="filter computed styles"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/elementsCssFilterClearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✕"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="12sp"
+            style="?attr/materialButtonOutlinedStyle" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/elementsCssRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@id/elementsCssFilterRow"
+        app:layout_constraintBottom_toTopOf="@id/elementsDetailLabel" />
+
+    <TextView
+        android:id="@+id/elementsDetailLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SELECTED NODE"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/elementsDetailPanel" />
+
+    <LinearLayout
+        android:id="@+id/elementsDetailPanel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.45">
+
+        <TextView
+            android:id="@+id/elementsSelectedLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nothing selected" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/elementsSelectedDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="12sp"
+                android:maxLines="8" />
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/elementsAttributesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ATTRIBUTES"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/elementsAttributesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxHeight="120dp" />
+
+        <LinearLayout
+            android:id="@+id/elementsAddAttributeRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/elementsNewAttrName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/elementsNewAttrValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="value"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/elementsAddAttrButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="12sp"
+                style="?attr/materialButtonOutlinedStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/elementsTextEditTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TEXT"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/elementsTextEditRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/elementsTextValueInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="text value"
+                android:inputType="textMultiLine"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/elementsApplyTextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="12sp"
+                style="?attr/materialButtonOutlinedStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/elementsHtmlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OUTER HTML"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/elementsOuterHtmlEdit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fontFamily="monospace"
+            android:inputType="textMultiLine"
+            android:textSize="11sp"
+            android:visibility="gone"
+            android:hint="Enter replacement HTML" />
+
+        <HorizontalScrollView
+            android:id="@+id/elementsOuterHtmlScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/elementsOuterHtmlText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="monospace"
+                android:textSize="11sp" />
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/elementsCancelHtmlButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:visibility="gone"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <Button
+                android:id="@+id/elementsEditHtmlButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Edit HTML"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <Button
+                android:id="@+id/elementsApplyHtmlButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Apply"
+                android:visibility="gone"
+                style="?attr/materialButtonOutlinedStyle" />
+
+            <Button
+                android:id="@+id/elementsDeleteNodeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete"
+                style="?attr/materialButtonOutlinedStyle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/elementsMutationStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/elementsRefreshButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            style="?attr/materialButtonOutlinedStyle" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
